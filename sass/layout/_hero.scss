@@ -48,14 +48,12 @@
 }
 
 .work-list {
+  gap: 8px;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.work-item:not(last-child) {
-  margin-right: 8px;
-}
 li > .all {
   color: var(--main-title-color);
   background-color: var(--second-title-color);

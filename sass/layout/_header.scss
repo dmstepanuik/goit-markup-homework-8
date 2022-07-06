@@ -4,6 +4,7 @@
 }
 
 .header-nav {
+  gap: 30px;
   display: flex;
   margin-right: auto;
 }
@@ -20,9 +21,6 @@
   display: flex;
 }
 
-/* .header-nav .item:(:last-child){
-  margin-right: 50px;
-} */
 .logo {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
