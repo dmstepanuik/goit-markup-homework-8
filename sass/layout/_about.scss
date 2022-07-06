@@ -12,10 +12,17 @@
 }
 
 .pic-list {
-  gap: 30px;
   list-style: none;
   display: flex;
-}
-.pic-list_item {
-  position: relative;
+
+  &__item {
+    position: relative;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
