@@ -747,6 +747,10 @@ li > .all {
   display: flex;
 }
 
+.pic-list_item {
+  position: relative;
+}
+
 .image-name-desktop {
   font-size: 14px;
   line-height: 1.14;
@@ -952,6 +956,9 @@ li > .all {
 }
 
 .adress-box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   margin-right: 70px;
 }
 
