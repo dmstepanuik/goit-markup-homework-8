@@ -1,6 +1,7 @@
 .hero {
   background: var(--second-title-color);
-  padding: 200px 0;
+  // padding: 200px 0;
+  padding: 208px 60px 198px;
   max-width: 1600px;
   min-height: 480px;
   margin-left: auto;
@@ -14,8 +15,8 @@
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.5;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
