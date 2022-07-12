@@ -215,6 +215,62 @@ body {
           justify-content: center;
 }
 
+.about {
+  display: none;
+  padding-bottom: 94px;
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    display: block;
+  }
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--forth-title-color);
+  margin-bottom: 50px;
+}
+
+.pic-list {
+  gap: 30px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pic-list__item {
+  position: relative;
+}
+
+.image-name-desktop {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  color: var(--btn-color);
+  background: rgba(47, 48, 58, 0.8);
+}
+
 .box-team-name {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -360,4 +416,78 @@ body {
 }
 .team-soc-link:hover .team-soc-icon, .team-soc-link:focus .team-soc-icon {
   fill: var(--btn-color);
+}
+
+.clients-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--forth-title-color);
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.clients-item {
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
+  }
+}
+
+.clients-link {
+  border: 1px solid var(--btn-soc);
+  border-radius: 4px;
+  padding: 16px 32px;
+  -webkit-transition: border-color var(--timing-function);
+  transition: border-color var(--timing-function);
+}
+.clients-link:hover, .clients-link:focus, .clients-link:hover .clients-icon, .clients-link:focus .clients-icon {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.clients-icon {
+  fill: rgb(175, 177, 184);
+  -webkit-transition: fill var(--timing-function);
+  transition: fill var(--timing-function);
 }/*# sourceMappingURL=main.css.map */
