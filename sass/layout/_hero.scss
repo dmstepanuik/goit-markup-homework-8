@@ -22,6 +22,7 @@
 }
 
 .hero__title {
+  max-width: 360px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.61;
@@ -32,6 +33,11 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    max-width: 696px;
+  }
 }
 
 .hero__btn {

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container main-nav">
         <nav class="header-nav">
           <a class="logo link" href="lang=en">Web<span class="logo-accent">Studio</span></a>
@@ -52,8 +52,77 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn">
+          <svg class="icon-three-lines" width="40" height="40">
+            <use href="./images/icons.svg#three-lines"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <button type="button" class="close-open-btn">
+          <svg class="icon-close-btn" width="40" height="40">
+            <use href="./images/icons.svg#close-backdrop"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu-list list">
+            <li class="mob-menu-item">
+              <a class="nav-link link current" href="./index.html">Студия</a>
+            </li>
+            <li class="mob-menu-item">
+              <a class="nav-link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mob-menu-item"><a class="nav-link link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="list">
+          <li class="mob-menu-item mailto mob-menu-link">
+            <a href="mailto:info@devstudio.com" class="mob-menu-contact-link link">
+              <svg class="icon-mail" width="16" height="14">
+                <use href="./images/icons.svg#mail"></use></svg
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="mob-menu-item-tel mob-menu-link">
+            <a href="tel:+380961111111" class="mob-menu-contact-link link">
+              <svg class="icon-tell" width="10" height="16">
+                <use href="./images/icons.svg#tell"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <ul class="mob-menu-soc list">
+                  <li class="mob-menu-soc-item">
+                    <a href="" class="mob-menu-soc link">
+                      <svg class="team-soc-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="mob-menu-soc-item">
+                    <a href="" class="mob-menu-soc-link link">
+                      <svg class="mob-menu-soc-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="mob-menu-soc-item">
+                    <a href="" class="mob-menu-soc-link link">
+                      <svg class="mob-menu-soc-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="mob-menu-soc-item">
+                    <a href="" class="mob-menu-soclink">
+                      <svg class="mob-menu-soc-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+      </div>
+    </header>
 
     <main>
       <section class="hero">
@@ -163,7 +232,7 @@
               <div class="box-team-name">
                 <h3 class="team-name">Игорь Демьяненко</h3>
                 <p lang="en" class="text">Product Designer</p>
-                <ul class="team-soc-list list list-style">
+                <ul class="team-soc-list list">
                   <li class="team-soc-item">
                     <a href="" class="team-soc-link link">
                       <svg class="team-soc-icon" width="20" height="20">
@@ -205,7 +274,7 @@
               <div class="box-team-name">
                 <h3 class="team-name">Ольга Репина</h3>
                 <p lang="en" class="text">Frontend Developer</p>
-                <ul class="team-soc-list list list-style">
+                <ul class="team-soc-list list">
                   <li class="team-soc-item">
                     <a href="" class="team-soc-link link">
                       <svg class="team-soc-icon" width="20" height="20">
@@ -242,7 +311,7 @@
               <div class="box-team-name">
                 <h3 class="team-name">Николай Тарасов</h3>
                 <p lang="en" class="text">Marketing</p>
-                <ul class="team-soc-list list list-style">
+                <ul class="team-soc-list list">
                   <li class="team-soc-item">
                     <a href="" class="team-soc-link link">
                       <svg class="team-soc-icon" width="20" height="20">
@@ -279,7 +348,7 @@
               <div class="box-team-name">
                 <h3 class="team-name">Михаил Ермаков</h3>
                 <p lang="en" class="text">UI Designer</p>
-                <ul class="team-soc-list list list-style">
+                <ul class="team-soc-list list">
                   <li class="team-soc-item">
                     <a href="" class="team-soc-link link">
                       <svg class="team-soc-icon" width="20" height="20">
@@ -318,7 +387,7 @@
       <section class="clients section">
         <div class="container">
           <h2 class="clients-title">Постоянные клиенты</h2>
-          <ul class="clients-list list list-style">
+          <ul class="clients-list list">
             <li class="clients-item">
               <a href="" class="clients-link link">
                 <svg class="clients-icon" width="106" height="60">
@@ -365,12 +434,12 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container container-footer">
         <div class="adress-box">
           <a class="footer-link" href="lang=en">Web<span class="footer-title">Studio</span></a>
           <address class="contacts">
-            <ul class="contacts-list list-style">
+            <ul class="contacts-list">
               <li class="contacts-item">
                 <a
                   class="adress-contacts"
@@ -423,6 +492,7 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-form">
           <p class="footer-form-text">Подпишитесь на рассылку</p>
           <form name="footer-form-sub" class="footer-form-sub">
@@ -446,9 +516,9 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-btn" width="11" height="11">
@@ -507,7 +577,7 @@
           <button type="submit" class="btn-modal">Отправить</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>

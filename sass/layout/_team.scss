@@ -1,7 +1,12 @@
 .box-team-name {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }
+
 .team-title {
   font-weight: 700;
   font-size: 28px;
@@ -14,6 +19,7 @@
   @media screen and (min-width: 1200px) {
     font-size: 36px;
   }
+
   .title {
     font-weight: 700;
     font-size: 28px;
@@ -36,12 +42,13 @@
 }
 
 .team-list {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
   @media screen and (min-width: 768px) {
-    gap: 30px;
-    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
   }
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
@@ -69,12 +76,8 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 60px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
 
   @media screen and (min-width: 1200px) {
