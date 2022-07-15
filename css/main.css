@@ -228,6 +228,18 @@ body {
   margin-left: auto;
 }
 
+.mob-menu {
+  position: fixed;
+  background-color: var(--main-title-color);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .hero {
   background: var(--second-title-color);
   padding: 118px 0;
