@@ -100,6 +100,10 @@ body {
   margin-right: auto;
 }
 
+.site-nav {
+  gap: 50px;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,7 +129,7 @@ body {
   color: var(--accent-color);
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-right: 93px;
+  margin-right: 85px;
 }
 
 .logo-accent {
@@ -164,8 +168,9 @@ body {
   position: relative;
 }
 
-.site-nav {
-  gap: 50px;
+.header-item-mailto:hover,
+.header-item-mailto:focus {
+  color: var(--accent-color);
 }
 
 .header-item-tel {
@@ -174,6 +179,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--third-title-color);
+  gap: 30px;
 }
 
 .header-contact-link {
@@ -236,9 +242,19 @@ body {
   }
 }
 
+.connection {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .connection {
     display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

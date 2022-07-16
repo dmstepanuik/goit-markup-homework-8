@@ -68,12 +68,18 @@
   position: relative;
 }
 
+.header-item-mailto:hover,
+.header-item-mailto:focus {
+  color: var(--accent-color);
+}
+
 .header-item-tel {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--third-title-color);
+  gap: 30px;
 }
 .header-contact-link {
   display: flex;
@@ -123,6 +129,7 @@
 }
 
 .connection {
+  display: none;
   @media screen and (min-width: 768px) {
     display: block;
   }
