@@ -8,6 +8,9 @@
   display: flex;
   margin-right: auto;
 }
+.site-nav {
+  gap: 50px;
+}
 
 .main-nav {
   display: flex;
@@ -63,10 +66,6 @@
 
 .header-item {
   position: relative;
-}
-
-.site-nav {
-  gap: 50px;
 }
 
 .header-item-tel {
@@ -126,6 +125,9 @@
 .connection {
   @media screen and (min-width: 768px) {
     display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
 // --------------MOBILE MENU---------------
