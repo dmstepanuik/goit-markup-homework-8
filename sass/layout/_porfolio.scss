@@ -1,8 +1,7 @@
 .work-list {
-  gap: 8px;
+  gap: 8px 15px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .li > .all {
@@ -105,7 +104,7 @@
 
 .list-project {
   gap: 30px;
-  display: flex;
+
   flex-wrap: wrap;
 }
 
