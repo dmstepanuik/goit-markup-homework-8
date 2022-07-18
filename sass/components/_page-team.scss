@@ -1,0 +1,113 @@
+.team {
+  background-color: #f5f4fa;
+
+  &__card {
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: $card-set-gap;
+      }
+    }
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: getColor('global-bacground');
+  }
+
+  &__block-description {
+    padding-bottom: 24px;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  &__profesion {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    color: getColor('secondary-text');
+  }
+
+  &__social-network-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-network:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__socials-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: getColor('white-text');
+
+    transition: background-color $timing-function-cubic;
+
+    &:hover,
+    &:focus {
+      background-color: getColor('accent');
+    }
+
+    &:hover .team__icon,
+    &:focus .team__icon {
+      fill: getColor('white-text');
+    }
+  }
+
+  &__icon {
+    fill: getColor('icon-border');
+
+    transition: fill $timing-function-cubic;
+  }
+
+  // ---- Стили для Таблетки ----------
+  @media screen and (min-width: $tablet) {
+    &__list {
+      display: flex;
+      @media screen and (max-width: 1199px) {
+        flex-wrap: wrap;
+        margin: calc(-1 * 15px);
+      }
+    }
+
+    &__card {
+      @media screen and (max-width: 1199px) {
+        flex-basis: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+      }
+
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+
+      background-color: getColor('white-text');
+    }
+
+    // ---- Стили для Desktop ----------
+    @media screen and (min-width: $desktop) {
+      &__list {
+        margin-right: calc(-1 * $card-set-gap);
+      }
+
+      &__card {
+        flex-basis: calc(100% / 4 - $card-set-gap);
+        margin-right: $card-set-gap;
+      }
+    }
+  }
+}

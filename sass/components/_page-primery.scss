@@ -1,0 +1,126 @@
+// ----Тело главной страницы
+// ------Превью с заголовком
+.primery {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  text-align: center;
+
+  // --- Фоновое изобржаение ДО 479рх
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bgi-header-mobail.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #2f303a;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bgi-header-mobail@2x.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bgi-header-mobail@3x.jpg');
+  }
+
+  // ----- Фоновое изобржаение ДО 767рх
+  max-width: 767px;
+  @media screen and (min-width: $mobail) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bgi-header-tablet.jpg');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bgi-header-tablet@2x.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bgi-header-tablet@3x.jpg');
+    }
+  }
+
+  // --- Фоновое изобржаение ДО 479рх
+  // --- tablet
+  @media screen and (min-width: $tablet) {
+    max-width: 1600px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/bgi-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #2f303a;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bgi-header-desktop@2x.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bgi-header-desktop@3x.jpg');
+    }
+
+    // --- Desktop
+    @media screen and (min-width: $desktop) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+  }
+
+  &__text {
+    margin-bottom: $card-set-gap;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: getColor('white-text');
+
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+
+  &__order-service {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-right: 31px;
+    padding-bottom: 10px;
+    padding-left: 31px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    color: getColor('white-text');
+    background-color: getColor('accent');
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+
+    transition: border-color $timing-function-cubic, background-color $timing-function-cubic;
+
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
+      border: 1px solid #188ce8;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

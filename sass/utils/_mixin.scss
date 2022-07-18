@@ -1,0 +1,5 @@
+// -------- МИКСИНЫ --------
+// -------- Позиционированные элементы -------
+@mixin positioning($position: relative) {
+  position: $position;
+}

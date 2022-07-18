@@ -1,0 +1,258 @@
+.footer {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  background-color: #2f303a;
+
+  &__logo {
+    @extend %logo-style-text;
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: getColor('logo-invers');
+
+    @media screen and (min-width: $desktop) {
+      display: inline-block;
+    }
+  }
+
+  &__accent-logo {
+    color: getColor('accent');
+  }
+
+  // -------------- Контакты в подвале
+  &__locatyon {
+    margin-bottom: 8px;
+
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: getColor('white-text');
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
+  }
+
+  .footer__contact-list:not(:last-child) {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__mail,
+  &__tell {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: getColor('contact-footer');
+
+    transition: color $timing-function-cubic;
+
+    &:focus,
+    &:hover {
+      color: getColor('accent');
+    }
+  }
+
+  &__block--position {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 1199px) {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+
+  &__position-tablet {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__block-contact {
+    @media screen and (min-width: $tablet) {
+      margin-right: 165px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 70px;
+    }
+  }
+}
+
+// ----------- Соцсети в подвале
+.social-media-footer {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 94px;
+  }
+
+  &__titel {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: getColor('white-text');
+  }
+
+  &__network {
+    display: flex;
+
+    @media screen and (max-width: 1199px) {
+      justify-content: center;
+    }
+  }
+
+  &__network-list:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color $timing-function-cubic;
+
+    &:hover,
+    &:focus {
+      background-color: getColor('accent');
+    }
+  }
+
+  &__icon {
+    fill: getColor('white-text');
+  }
+}
+
+// ------------ Подписка на рассылку
+.subscribe__titel {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: getColor('white-text');
+  margin-bottom: 20px;
+}
+
+.subscribe__form {
+  display: flex;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.subscribe__input {
+  width: 100%;
+  height: 50px;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  background: rgba(47, 48, 58, 1);
+  color: getColor('white-text');
+
+  transition: border-color $timing-function-cubic;
+
+  &:hover,
+  &:focus {
+    border-color: getColor('accent');
+    outline: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    height: 50px;
+
+    margin-right: 12px;
+    padding-left: 18px;
+  }
+}
+
+.subscribe__button {
+  padding-top: 10px;
+  padding-right: 29px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px;
+
+  cursor: pointer;
+
+  background: getColor('accent');
+  color: getColor('white-text');
+
+  transition: background $timing-function-cubic;
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
+}
+
+.subscribe__icon {
+  margin-left: 10px;
+
+  fill: getColor('white-text');
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .subscribe {
+    width: 450px;
+  }
+}

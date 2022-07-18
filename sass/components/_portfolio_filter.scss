@@ -1,0 +1,69 @@
+//  --------- Стилизация Портфолио
+//  --------- Тело сайта
+
+//  --------- Фильтр
+.portfolio__filter {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+
+    &-button:not(:nth-child(n + 4)) {
+      margin-bottom: 15px;
+    }
+  }
+
+  margin-bottom: 40px;
+
+  &-button:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  // -------- Tablet
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  // ------ Desktop
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 34px;
+  }
+}
+
+.portfolio__button {
+  padding: 6px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  cursor: pointer;
+
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+  background-color: getColor('font-filter');
+
+  border: 1px solid getColor('font-filter');
+  border-radius: 4px;
+
+  transition: background-color $timing-function-cubic, border $timing-function-cubic,
+    color $timing-function-cubic, box-shadow $timing-function-cubic;
+
+  &:hover,
+  &:focus,
+  &--active {
+    border: 1px solid getColor('accent');
+    border-radius: 4px;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 10%), 0px 1px 2px rgba(0, 0, 0, 8%),
+      0px 2px 2px rgba(0, 0, 0, 12%);
+
+    color: getColor('white-text');
+    background-color: getColor('accent');
+
+    cursor: pointer;
+  }
+}

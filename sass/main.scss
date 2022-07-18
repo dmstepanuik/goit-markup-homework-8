@@ -1,22 +1,15 @@
-//utils
-@import './utils/vars';
-@import './utils/hidden';
-
-//base styles
-@import './base/reset';
-@import './base/common';
-
-//components styles
-@import './componants/container';
-// @import './components/modal';
-
-//layot styles
-@import './layout/header';
-@import './layout/hero';
-@import './layout/portfolio';
-@import './layout/characteristics';
-@import './layout/about';
-@import './layout/animation';
-@import './layout/team';
-@import './layout/clients';
-@import './layout/footer';
+@import 'utils/mixin';
+@import 'utils/variables';
+@import 'utils/breakpoints';
+@import 'utils/global-style';
+@import 'components/page-header';
+@import 'components/_page-primery';
+@import 'components/page-feature';
+@import 'components/page-services';
+@import 'components/page-team';
+@import 'components/page-clients';
+@import 'components/page-footer';
+@import 'components/page-modal';
+@import 'components/page-form';
+@import 'components/portfolio_filter';
+@import 'components/portfolio-card-set';

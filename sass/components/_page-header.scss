@@ -1,0 +1,402 @@
+// ----------- Шапка сайта
+.header {
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
+
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
+
+    &__container {
+        position: relative;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        @media screen and (max-width: 767px) {
+            &.is-open {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                position: absolute;
+
+                z-index: 999;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+
+                overflow-y: scroll;
+
+                padding-top: 48px;
+                padding-bottom: 48px;
+                padding-left: 40px;
+                padding-right: 40px;
+
+                background-color: getColor('global-bacground');
+            }
+        }
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            padding-top: 24px;
+            padding-bottom: 25px;
+        }
+
+        @media screen and (max-width: 767px) {
+            &.is-open .header__logo {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        @extend %logo-style-text;
+
+        color: getColor('logo');
+
+        &-accent {
+            color: getColor('accent');
+        }
+
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+
+    // -------------- Кнопка Меню
+
+    &__batton-menu,
+    &__batton-cross {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+
+        border: none;
+
+        background: none;
+
+        &:hover .header__icon-button {
+            fill: getColor('accent');
+        }
+
+        @media screen and (min-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__batton-menu {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    &__container.is-open .header__batton-cross {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    &__batton-cross {
+        display: none;
+    }
+
+    &__container.is-open .header__batton-cross {
+        display: block;
+    }
+
+    &__container.is-open .header__batton-menu {
+        display: none;
+    }
+}
+
+// --------- Навигация
+.navigation {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header__container.is-open .navigation {
+        display: block;
+    }
+}
+
+.navigation__menu {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+
+        font-size: 14px;
+        line-height: 1.14;
+
+        :not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navigation__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.navigation__link {
+    color: getColor('primary-text');
+    text-decoration: none;
+
+    transition: color $timing-function-cubic;
+
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+    }
+
+    &--carrent {
+        color: getColor('accent');
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        &--carrent {
+            @include positioning();
+        }
+
+        &--carrent::after {
+            content: '';
+            display: block;
+            @include positioning(absolute);
+
+            width: 100%;
+            height: 4px;
+            bottom: -1px;
+            right: 0;
+
+            border-radius: 4px;
+            background: getColor('accent');
+        }
+    }
+}
+
+.header__nav-pc {
+    display: none;
+}
+
+// ------- навигация и лого для PC
+@media screen and (min-width: $desktop) {
+    .header__nav-pc {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .header__logo-pc {
+        margin-right: 93px;
+
+        font-family: $fontLogo;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.16;
+        text-decoration: none;
+
+        font-size: 26px;
+        line-height: 1.19;
+
+        color: getColor('logo');
+
+        &-accent {
+            color: getColor('accent');
+        }
+    }
+}
+
+// ----------- Контакты mobail ---------
+.contacts-mobail {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+    }
+
+    @media screen and (max-width: 767px) {
+        &__item:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        &__icon-tell,
+        &__icon-mail {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        &__item:last-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        &__item:last-child {
+            margin-right: $card-set-gap;
+        }
+    }
+
+    &__list {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 64px;
+        }
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        @media screen and (min-width: $desktop) {
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        %all-style-contact {
+            color: getColor('secondary-text');
+            text-decoration: none;
+
+            transition: color $timing-function-cubic;
+
+            &:hover,
+            &:focus {
+                color: getColor('accent');
+            }
+        }
+    }
+
+    &__tell {
+        @extend %all-style-contact;
+
+        display: block;
+
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+
+        list-style-type: none;
+    }
+
+    @media screen and (max-width: 767px) {
+        & .contacts-mobail__tell.contacts-mobail__tell-color {
+            color: getColor('accent');
+
+            &:hover,
+            &:focus {
+                color: #188ce8;
+            }
+        }
+    }
+
+    &__mail {
+        @extend %all-style-contact;
+
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+
+        list-style-type: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        &__mail,
+        &__tell {
+            display: flex;
+            align-items: center;
+
+            font-size: 14px;
+            line-height: 1.16;
+
+            transition: color $timing-function-cubic;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        &__icon-mail,
+        &__icon-tell {
+            fill: currentColor;
+        }
+    }
+}
+
+.header__container.is-open .contacts-mobail {
+    display: block;
+}
+
+// ----- Соцсети в мобильно меню -------
+
+.social-network-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__link {
+        text-decoration: none;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+
+        letter-spacing: 0.02em;
+
+        color: getColor('accent');
+
+        transition: color $timing-function-cubic;
+
+        &:hover {
+            color: #188ce8;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+        @media screen and (max-width: 440px) and (min-width: 367px) {
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (max-width: 367px) {
+        .social-network-menu__item:not(:nth-child(n + 3)) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__symbol {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}

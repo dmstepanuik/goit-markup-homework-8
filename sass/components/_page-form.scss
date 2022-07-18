@@ -1,0 +1,207 @@
+// ----------- ФОРМА
+// ----------- Данные заказчика
+.form__block-user-data {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.form__label {
+  @include positioning();
+
+  @media screen and (max-width: 767px) {
+    &:hover .form__name,
+    &:focus .form__name {
+      color: getColor('accent');
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.form__name {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: getColor('secondary-text');
+
+  transition: color $timing-function-cubic;
+}
+
+.form__input {
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  color: getColor('primary-text');
+
+  transition: border $timing-function-cubic;
+
+  &:hover,
+  &:focus {
+    border: 1px solid getColor('accent');
+    outline: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:hover .form__name,
+    &:focus .form__name {
+      color: getColor('accent');
+    }
+  }
+
+  &:hover + .form__icon,
+  &:focus + .form__icon {
+    fill: getColor('accent');
+  }
+}
+
+.form__icon {
+  @include positioning(absolute);
+  top: 50%;
+  left: 12px;
+
+  transition: fill $timing-function-cubic;
+}
+
+.form__comment {
+  width: 100%;
+
+  resize: none;
+
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+
+  color: getColor('primary-text');
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border $timing-function-cubic;
+
+  &:focus,
+  &:hover {
+    border: 1px solid getColor('accent');
+    outline: none;
+  }
+}
+
+// ---- Соглашенние с рассылкой. ЧЕКБОКС
+.form__agreemenr {
+  margin-bottom: $card-set-gap;
+}
+
+.form__check-label {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1.16;
+
+  color: getColor('secondary-text');
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.form__check-modal {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &--checked:hover + .form__check-icon,
+  &--checked:focus + .form__check-icon {
+    border-color: getColor('accent');
+  }
+
+  &--checked:checked + .form__check-icon {
+    background: getColor('accent');
+    border-color: getColor('accent');
+    background-image: url(../images/icon-check.svg);
+    background-position: center;
+    background-size: 11px 8px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+  }
+}
+
+.form__check-icon {
+  width: 16px;
+  height: 15px;
+
+  margin-right: 6px;
+
+  border: 2px solid getColor('primery-text');
+  border-radius: 2px;
+
+  transition: border-color $timing-function-cubic, background $timing-function-cubic;
+}
+
+.form__modal-treaty {
+  margin-left: 2px;
+
+  text-decoration: none;
+
+  color: getColor('accent');
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// --------- Кнопка отправки
+.form__box-modal-send {
+  display: flex;
+  justify-content: center;
+}
+
+.form__modal-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-left: 56px;
+  padding-bottom: 10px;
+  padding-right: 56px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px;
+  border-radius: 4px;
+
+  color: getColor('white-text');
+  background: getColor('accent');
+
+  cursor: pointer;
+
+  transition: background $timing-function-cubic;
+
+  &:hover {
+    background: #188ce8;
+  }
+}

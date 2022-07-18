@@ -1,0 +1,41 @@
+// ---------Предоставляемые услуги
+@media screen and (max-width: 1199px) {
+  .services {
+    display: none;
+  }
+}
+
+// -------- Стили для ПК
+
+.services__list {
+  display: flex;
+
+  margin-right: calc(-1 * $card-set-gap);
+}
+
+.services__item {
+  @include positioning();
+  flex-basis: calc(100% / 3 - $card-set-gap);
+
+  margin-right: $card-set-gap;
+}
+
+.services__labl {
+  @include positioning(absolute);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+
+  color: getColor('white-text');
+
+  background: getColor('font-label');
+}

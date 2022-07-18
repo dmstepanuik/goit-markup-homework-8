@@ -1,0 +1,27 @@
+$colors: (
+  'global-bacground': #ffffff,
+  'primary-text': #212121,
+  'secondary-text': #757575,
+  'white-text': #ffffff,
+  'logo': #000000,
+  'logo-invers': #ffffff,
+  'accent': #2196f3,
+  'font-filter': #f5f4fa,
+  'contact-footer': rgba(255, 255, 255, 0.6),
+  'icon-border': #afb1b8,
+  'font-label': rgba(47, 48, 58, 0.8),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+// --------- ШРИФТЫ -----
+$fontPrimery: Roboto, sans-serif;
+$fontLogo: Raleway, sans-serif;
+
+// кубик + время анимации
+$timing-function-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// стандарные отсутпы
+$card-set-gap: 30px;
