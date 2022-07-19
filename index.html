@@ -300,20 +300,31 @@
           <ul class="team__list padding-list">
             <li class="team__card">
               <picture>
+                <!-- Изображение для десктопа -->
                 <source
+                  media="(min-width: 1200px)"
                   srcset="
-                    ./images/igor.webp     1x,
-                    ./images/igor@2x.webp  2x
-                    ./images/igor@3x.webp  3x"
-                  type="image/webp"
+                    ./images/imgdesktop/masters_desk-1x.jpg 1x,
+                    ./images/imgdesktop/masters_desk-2x.jpg 2x
+                  "
                 />
-
-                <img
-                  srcset="./images/igor.jpg 1x, ./images/igor@2x.jpg 2x, ./images/igor@3x.jpg 3x"
-                  src="./images/igor.jpg"
-                  alt="Игорь Демьяненко"
-                  class="img-position"
+                <!-- Изображение для планшета -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/imgtablet/masters_tab1-x.jpg 1x,
+                    ./images/imgtablet/masters_tab2-x.jpg 2x
+                  "
                 />
+                <!-- Изображение для мобильных девайсов -->
+                <source
+                  media="(min-width: 767px)"
+                  srcset="
+                    ./images/imgmob/masters_mob1-x.jpg 1x,
+                    ./images/imgmob/masters_mob2-x.jpg 2x
+                  "
+                />
+                <img class="img-position" src="./images/igor.jpg" alt="Игорь Демьяненко" />
               </picture>
 
               <div class="team__block-description">
@@ -354,17 +365,31 @@
 
             <li class="team__card">
               <picture>
+                <!-- Изображение для десктопа -->
                 <source
-                  srcset="./images/olga.webp 1x, ./images/olga@2x.webp 2x, ./images/olga@3x.webp 3x"
-                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/imgdesktop/masters_2desk-1x.jpg 1x,
+                    ./images/imgdesktop/masters_2desk-2x.jpg 2x
+                  "
                 />
-
-                <img
-                  srcset="./images/olga.jpg 1x, ./images/olga@2x.jpg 2x, ./images/olga@3x.jpg 3x"
-                  src="./images/olga.jpg"
-                  alt="Ольга Репина"
-                  class="img-position"
+                <!-- Изображение для планшета -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/imgtablet/masters_2tab1-x.jpg 1x,
+                    ./images/imgtablet/masters_2tab2-x.jpg 2x
+                  "
                 />
+                <!-- Изображение для мобильных девайсов -->
+                <source
+                  media="(min-width: 767px)"
+                  srcset="
+                    ./images/imgmob/masters_2mob1-x.jpg 1x,
+                    ./images/imgmob/masters_2mob2-x.jpg 2x
+                  "
+                />
+                <img class="img-position" src="./images/olga.jpg" alt="Ольга Репина" />
               </picture>
 
               <div class="team__block-description">
@@ -405,27 +430,32 @@
 
             <li class="team__card">
               <picture>
+                <!-- Изображение для десктопа -->
                 <source
+                  media="(min-width: 1200px)"
                   srcset="
-                    ./images/nykolay.webp    1x,
-                    ./images/nykolay@2x.webp 2x,
-                    ./images/nykolay@3x.webp 3x
+                    ./images/imgdesktop/masters_3desk-1x.jpg 1x,
+                    ./images/imgdesktop/masters_3desk-2x.jpg 2x
                   "
-                  type="image/webp"
                 />
-
-                <img
+                <!-- Изображение для планшета -->
+                <source
+                  media="(min-width: 768px)"
                   srcset="
-                    ./images/nykolay.jpg    1x,
-                    ./images/nykolay@2x.jpg 2x,
-                    ./images/nykolay@3x.jpg 3x
+                    ./images/imgtablet/masters_3tab-1x.jpg 1x,
+                    ./images/imgtablet/masters_3tab-2x.jpg 2x
                   "
-                  src="./images/nykolay.jpg"
-                  alt="Николай Тарасов"
-                  class="img-position"
                 />
+                <!-- Изображение для мобильных девайсов -->
+                <source
+                  media="(min-width: 767px)"
+                  srcset="
+                    ./images/imgmob/masters_3mob1-x.jpg 1x,
+                    ./images/imgmob/masters_3mob2-x.jpg 2x
+                  "
+                />
+                <img class="img-position" src="./images/nykolay.jpg" alt="Николай Тарасов" />
               </picture>
-
               <div class="team__block-description">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p lang="en" class="team__profesion">Marketing</p>
@@ -464,25 +494,31 @@
 
             <li class="team__card">
               <picture>
+                <!-- Изображение для десктопа -->
                 <source
+                  media="(min-width: 1200px)"
                   srcset="
-                    ./images/myhayl.webp    1x,
-                    ./images/myhayl@2x.webp 2x,
-                    ./images/myhayl@3x.webp 3x
+                    ./images/imgdesktop/masters_4desk-1x.jpg 1x,
+                    ./images/imgdesktop/masters_4desk-2x.jpg 2x
                   "
-                  type="image/webp"
                 />
-
-                <img
+                <!-- Изображение для планшета -->
+                <source
+                  media="(min-width: 768px)"
                   srcset="
-                    ./images/myhayl.jpg    1x,
-                    ./images/myhayl@2x.jpg 2x,
-                    ./images/myhayl@3x.jpg 3x
+                    ./images/imgtablet/masters_4tab1-x.jpg 1x,
+                    ./images/imgtablet/masters_4tab2-x.jpg 2x
                   "
-                  src="./images/myhayl.jpg"
-                  alt="Михаил Ермаков"
-                  class="img-position"
                 />
+                <!-- Изображение для мобильных девайсов -->
+                <source
+                  media="(min-width: 767px)"
+                  srcset="
+                    ./images/imgmob/masters_4mob1-x.jpg 1x,
+                    ./images/imgmob/masters_4mob2-x.jpg 2x
+                  "
+                />
+                <img class="img-position" src="./images/myhayl.jpg" alt="Николай Тарасов" />
               </picture>
 
               <div class="team__block-description">
