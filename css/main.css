@@ -630,6 +630,10 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
   margin-bottom: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -688,8 +692,8 @@ p {
     margin: -15px;
   }
   .feature__items {
-    -ms-flex-preferred-size: calc((100% - 30px) / 4);
-        flex-basis: calc((100% - 30px) / 4);
+    -ms-flex-preferred-size: calc((100% - 120px) / 4);
+        flex-basis: calc((100% - 120px) / 4);
     margin: 15px;
   }
   .feature__container-icon {
